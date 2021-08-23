@@ -17,7 +17,7 @@ exports.signup = (req, res) => {
       alamat: req.body.alamat,
       jenis_kelamin: req.body.jenis_kelamin,
       foto_profil: req.body.foto_profil,
-      password: bcrypt.hashSync(req.body.password, 8),
+      password: bcrypt.hashSync(req.body.password, 8)
    })
       .then(user => {
          if (req.body.roles) {
@@ -47,7 +47,7 @@ exports.signup = (req, res) => {
 exports.signin = (req, res) => {
    User.findOne({
       where: {
-         username: req.body.username
+         email: req.body.email
       }
    })
       .then(user => {
@@ -78,13 +78,13 @@ exports.signin = (req, res) => {
             }
             res.status(200).send({
                id: user.id,
-               username: user.username,
-               email: user.email,
-               nama_lengkap: user.nama_lengkap,
-               alamat: user.alamat,
-               jenis_kelamin: user.jenis_kelamin,
-               foto_profil: user.foto_profil,
-               roles: authorities,
+               // username: user.username,
+               // email: user.email,
+               // nama_lengkap: user.nama_lengkap,
+               // alamat: user.alamat,
+               // jenis_kelamin: user.jenis_kelamin,
+               // foto_profil: user.foto_profil,
+               // roles: authorities,
                accessToken: token
             });
          });
