@@ -1,3 +1,4 @@
+# Step by Step 
 1. Import DB
 2. Eksekusi query berikut :
   INSERT INTO roles VALUES (1, 'user', NOW(), NOW());
@@ -5,9 +6,10 @@
   INSERT INTO roles VALUES (3, 'admin', NOW(), NOW());
 
 3.Untuk routesnya :
-  3.1 Register (POST)
+    
+    3.1 Register (POST)
     URL : http://localhost:3000/api/auth/signup
-
+    
     REQUEST_BODY :
     {
         "username" : "username",
