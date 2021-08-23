@@ -48,7 +48,12 @@
         "accessToken": "accessToken"
     }
     
-    3.3 - ..... on progress + waktu habis 
+    3.3 Laman Pembaca (GET)
+    URL : http://localhost:3000/api/pembaca
+    REQUEST_HEADER :
+      x-access-token : accessToken (dapat dari login)
+      
+    3.4 - ..... on progress + waktu habis 
 
 
 NB : 
